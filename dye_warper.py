@@ -25,7 +25,7 @@ try: from PIL import Image
 except ImportError: import Image
 
 parser = ArgumentParser(add_help=False,
-	description = "Warp dyes palettes from Mabinogi."
+	description = "Warp dye palettes from Mabinogi."
 )
 parser.add_argument("-?", "--help", action="help")
 parser.add_argument("--version", action="version", version="1")
