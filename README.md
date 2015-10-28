@@ -59,4 +59,4 @@ It then moves the pixel at x,y on the source palette to x',y or x,y' on the dest
 
 The desination palette will always be 256 x 256 regarless of the size of the source palette.
 
-Special thanks to Xcelled for doing all the testing while I barked at him over Skype!!
+Special thanks to Xcelled for doing all the hard work while I barked at him over Skype!!
