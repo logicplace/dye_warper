@@ -1,10 +1,8 @@
 # General #
-You must have Python 2.7 with PIL installed.
-or Python 3 with Pillow installed if you can get it to work.
-Python 2.7 with Pillow works too.
-This was only tested on Linux but it should work on Windows,
-you know, if you can get PIL/Pillow installed.
-See dye_warper.py --help for usage.
+You must have Python 2.7 with PIL installed or Python 3 with Pillow installed if you can get it to work. Python 2.7 with Pillow works too.
+
+This was only tested on Linux but it should work on Windows, you know, if you can get PIL/Pillow installed.
+
 General use is probably going to be something like:
  python dye_warper.py -d C:\Nexon\Mabinogi -p cloth 0 0 0 0
 
