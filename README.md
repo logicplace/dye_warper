@@ -35,7 +35,7 @@ Provide a custom distortion file. If this is used, you must also provide a custo
 You may provide more than one file. The first one provided is given an index of 1 and so forth.
 
 #### -w, --width, -h, --height ####
-When providing custom distortion information, you may explicitely provide the width and height if you want. These must be integers and you may omit one or both of them. It will attempt to guess those that are left out using the size of the palette file.
+When providing custom distortion information, you may explicitly provide the width and height if you want. These must be integers and you may omit one or both of them. It will attempt to guess those that are left out using the size of the palette file.
 
 #### -m, --morph ####
 When providing custom distortion information, you must provide custom morphing steps. They are executed in the order they are provided.
@@ -57,6 +57,6 @@ The system calculates `x' = x + rate * distortion[y + rnd]` or similarly `y' = y
 
 It then moves the pixel at x,y on the source palette to x',y or x,y' on the destination palette and repeats this process for each iteration.
 
-The desination palette will always be 256 x 256 regarless of the size of the source palette.
+The destination palette will always be 256 x 256 regardless of the size of the source palette.
 
 Special thanks to Xcelled for doing all the hard work while I barked at him over Skype!!
