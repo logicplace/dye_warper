@@ -4,7 +4,8 @@ You must have Python 2.7 with PIL installed or Python 3 with Pillow installed if
 This was only tested on Linux but it should work on Windows, you know, if you can get PIL/Pillow installed.
 
 General use is probably going to be something like:
- python dye_warper.py -d C:\Nexon\Mabinogi -p cloth 0 0 0 0
+
+    python dye_warper.py -d C:\Nexon\Mabinogi -p cloth 0 0 0 0
 
 This will never support creating palette or distortion files.
 
@@ -48,5 +49,14 @@ Type refers to the morph type. 1 is used for horizontal distortions and 2 is use
 Rate is a float generally between 0 and 1 specifying how dramatic the distortion is. The higher the number, the more dramatic it is.
 
 # Details #
-TODO: How it works.
-Special thanks to Xcelled!!
+Essentially Mabi runs through four distortions over a raw palette file. It does a horizontal distortion, then a vertical, horizontal, and vertical again. It applies these sequentially.
+
+This distortion is generated from the combination of four random values (one for each distortion) provided by the server combined with a cached sin^2 wave and a weight (called the rate) defined per palette+distortion.
+
+The system calculates `x' = x + rate * distortion[y + rnd]` or similarly `y' = y + rate * distortion[x + rnd]` Of course this is with respect to the bounds (ie. it's modulo math).
+
+It then moves the pixel at x,y on the source palette to x',y or x,y' on the destination palette and repeats this process for each iteration.
+
+The desination palette will always be 256 x 256 regarless of the size of the source palette.
+
+Special thanks to Xcelled for doing all the testing while I barked at him over Skype!!
