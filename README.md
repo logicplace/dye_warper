@@ -49,3 +49,4 @@ Rate is a float generally between 0 and 1 specifying how dramatic the distortion
 
 # Details #
 TODO: How it works.
+Special thanks to Xcelled!!
